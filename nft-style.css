@@ -102,6 +102,7 @@ p {
 }
 .eth {
 	display: flex;
+	align-items: center;
 }
 hr {
 	border: 0;
