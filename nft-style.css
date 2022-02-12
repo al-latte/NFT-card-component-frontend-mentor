@@ -1,0 +1,144 @@
+*,
+::before,
+::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/*Declaring color variables */
+
+	/* Primary Colors */
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+
+	/* Background/neutral colors */
+	--main-background: hsl(217, 54%, 11%);
+	--card-background: hsl(216, 50%, 16%);
+	--line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	height: 100vh;
+	font-family: "Outfit", sans-serif;
+	background-color: var(--main-background);
+	color: var(--white);
+}
+
+p {
+	font-size: 18px;
+}
+
+.image {
+	position: relative;
+	width: 100%;
+}
+#card-image {
+	display: block;
+	width: 100%;
+	border-radius: 10px;
+}
+
+#view-icon {
+	width: 50px;
+	height: 50px;
+}
+
+.view-icon-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: hsla(178, 100%, 50%, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	border-radius: 10px;
+}
+
+.card {
+	background-color: var(--card-background);
+	width: 90vw;
+	margin: 3.5em auto;
+	border-radius: 20px;
+	padding: 1.5em;
+	box-shadow: 10px 10px 20px 5px hsl(218, 61%, 7%);
+}
+p {
+	color: var(--soft-blue);
+	font-weight: 300;
+}
+#card-title {
+	font-weight: 600;
+	margin-top: 1em;
+	margin-bottom: 0.75em;
+}
+
+#card-main-text {
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 0.75em;
+}
+
+#eth-text {
+	color: var(--cyan);
+	font-weight: 600;
+	font-size: 18px;
+}
+#eth-icon,
+#days-clock {
+	margin-right: 10px;
+}
+
+.stats {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.75em;
+	align-items: center;
+}
+.eth {
+	display: flex;
+}
+hr {
+	border: 0;
+	height: 1px;
+	background: var(--line);
+}
+
+#avatar-img {
+	width: 10%;
+	margin-right: 20px;
+	border: 1px solid var(--white);
+	border-radius: 50%;
+}
+.avatar {
+	display: flex;
+	align-items: center;
+	margin-top: 0.75em;
+}
+
+#name {
+	color: var(--white);
+	font-weight: 400;
+}
+
+.view-icon-overlay:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#card-title:hover,
+#name:hover {
+	color: var(--cyan);
+	cursor: pointer;
+}
+
+@media only screen and (min-width: 375px) {
+	.card {
+		width: 350px;
+	}
+}
